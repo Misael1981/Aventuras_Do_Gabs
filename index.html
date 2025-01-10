@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== NORMALIZE CSS ===== -->
+    <link href="
+        https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" 
+    rel="stylesheet">
+    <!-- ====== RESET CSS ===== -->
+    <link href="
+        https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" 
+    rel="stylesheet">
     <!-- ===== CSS ===== -->
-     <link rel="stylesheet" href="./assets/css/reset.css">
-     <link rel="stylesheet" href="./assets/css/style.css">
-     <link rel="stylesheet" href="./assets/css/global.css">
-     <link rel="stylesheet" href="./assets/css/responsivo.css">
+    <link rel="stylesheet" href="style.css">
     <!-- ===== Js ===== -->
      <script src="./assets/js/script.js" defer></script>
     <title>As Aventuras do Gabs</title>
@@ -19,21 +24,21 @@
             <img src="./assets/img/gabs.png" alt="Foto do Gabriel">
         </div>
         <ul class="nav">
-            <li class="nav__menu-item">
+            <li class="nav__item">
                 <img class="aside__icon" src="./assets/img/casa-flintstones.png" alt="Casa da era das pedras">
-                <a href="#home"> Home</a>
+                <a class="nav__link" href="#home"> Home</a>
             </li>
-            <li class="nav__menu-item">
+            <li class="nav__item">
                 <img class="aside__icon" src="assets/img/ovo.png" alt="Desenho de ovos de dinossauro">
-                <a href="#pregnancy">Pregnancy</a>
+                <a class="nav__link" href="#pregnancy">Pregnancy</a>
             </li>
-            <li class="nav__menu-item">
+            <li class="nav__item">
                 <img class="aside__icon" src="./assets/img/dino-nascendo.png" alt="Desenho de um dinossauro saindo ovo">
-                <a href="#firstYear">FirstYear</a>
+                <a class="nav__link" href="#firstYear">FirstYear</a>
             </li>
-            <li class="nav__menu-item">
+            <li class="nav__item">
                 <img class="aside__icon" src="./assets/img/controle.png" alt="Desenho de um controle de video-game">
-                <a href="#games">Games</a>
+                <a class="nav__link" href="#games">Games</a>
             </li>
         </ul>
     </div>
@@ -51,7 +56,7 @@
         </div>
         <div class="frame-speechBubbles">
             <div class="speechBubbles">
-                <p>Oi gente, eu sou o Gabs! E por aqui eu vou contar um pouquinho das histórias e minhas aventuras!!! Vamos lá!!!</p>
+                <p>Oi gente, eu sou o Gabs! E por aqui eu vou contar um pouquinho da minha história e minhas aventuras!!! Vamos lá!!!</p>
             </div>
             <div class="dino">
                 <img src="./assets/img/dinos/dino-01.png" alt="desenho de um dinossauro correndo"> 

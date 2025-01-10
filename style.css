@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('./assets/css/home.css');
+@import url('./assets/css/aside.css');
+@import url('./assets/css/pregnancy.css');
+@import url('./assets/css/firstYear.css');
+@import url('./assets/css/games.css');
 
 :root {
     --font-size-xs: 0.75rem;
@@ -41,8 +46,55 @@
 
 html {
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 body {
     font-family: var(--roboto);
+}
+
+.section {
+    background: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+    position: fixed;
+    left: 17rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+.section.back-section {
+    z-index: 1;
+}
+
+.section.active {
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes slideSection {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .section {
+        left: 0;
+    }
 }

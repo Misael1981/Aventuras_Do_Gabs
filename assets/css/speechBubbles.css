@@ -16,7 +16,7 @@
     background-color: var(--bg-bublles);
     text-align: center;
     width: 70vw;
-    padding: 3rem;
     border-radius: 10px 60px 60px 60px;
     color: var(--black);
+    padding: var(--padding-m);
 }

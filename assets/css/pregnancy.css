@@ -1,0 +1,6 @@
+body .pregnancy {
+    background-color: var(--laranja);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

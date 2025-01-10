@@ -1,0 +1,112 @@
+/* ===== ASIDE ===== */
+.aside {
+    width: 100%;
+    height: 100%;
+}
+
+.aside .perfil {
+    display: none;
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--bg-azul-turquesa-claro);
+    box-sizing: border-box;
+    padding: .5rem;
+    z-index: 5;
+}
+
+.nav__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-xs);
+}
+
+.nav__item a {
+    text-decoration: none;
+}
+
+.aside__icon {
+    width: 3.2rem;
+}
+
+.nav__item a {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+@media screen and (width > 720px) {
+    .aside {
+        background-image: url('../img/bg-primary.png');
+        background-color: #67b8d3;
+        width: 17rem;
+        height: 100vh;
+        border-right: 2px solid var(--azul-turquesa);
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aside .perfil {
+        display: block;
+        width: 10rem;
+        margin: 4rem 0;
+    }
+
+    .perfil img {
+        width: 100%;
+        border-radius: 50%;
+        background-color: var(--laranja);
+    }
+
+    .nav {
+        position: static;
+        flex-direction: column;
+        gap: var(--gap-l);
+        background-color: transparent;
+        width: 10rem;
+    }
+
+    .nav__item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: .5rem;
+        /* border-bottom: 2px solid olivedrab; */
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 4px;
+            background-color: var(--laranja);
+            transition: width 0.5s ease;
+        }
+    }
+
+    .nav__item:hover::after,
+    .nav__item:focus::after {
+        width: 100%;
+    }
+
+    .nav__item a:hover {
+        color: var(--laranja);
+    }
+
+    .nav__item a {
+        font-size: var(--font-size-m);
+        color: var(--azul-turquesa);
+    }
+}
